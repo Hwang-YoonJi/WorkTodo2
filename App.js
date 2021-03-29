@@ -23,7 +23,7 @@ export default function App() {
       
       {/* Today's Tasks */}
       <View style={styles.tasksWrapper}>
-        <Text style={styles.sectionTitle}>Today's Tasks</Text>
+        <Text style={styles.sectionTitle}>To Do List</Text>
 
         <View style={styles.item}>
           {/* This is where the tasks will go! 여기서 작업이 진행됩니다! */}
@@ -47,7 +47,7 @@ export default function App() {
         behavior={Platform.OS == "ios" ? "padding" : "height"}
         style={styles.writeTaskWrapper}
       >
-        <TextInput style={styles.input} placeholder={'Write a task'} value={task} onChangeText={text => setTask(text)} />
+        <TextInput style={styles.input} placeholder={'새로운 할 일 추가'} value={task} onChangeText={text => setTask(text)} />
 
         <TouchableOpacity onPress={() => handleAddTask()}>
           <View style={styles.addWrapper}>
@@ -63,7 +63,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#e8eaed',
+    backgroundColor: '#ffcdd2',
   },
   tasksWrapper: {
     paddingTop: 80,
@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 24,
     fontWeight: 'bold',
+    color: '#ba2d65',
   },
   item: {
     marginTop: 30,
@@ -89,7 +90,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     backgroundColor: '#fff',
     borderRadius: 60,
-    borderColor: '#c0c0c0',
+    borderColor: '#ba2d65',
     borderWidth: 1,
     width: 250,
   },
@@ -100,7 +101,7 @@ const styles = StyleSheet.create({
     borderRadius: 60,
     justifyContent: 'center',
     alignItems: 'center',
-    borderColor: '#c0c0c0',
+    borderColor: '#ba2d65',
     borderWidth: 1,
   },
   addText: {},
